@@ -16,8 +16,8 @@ export default function ParticlesBackground() {
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 2 + 1;
         this.color = colors[Math.floor(Math.random() * colors.length)];
-        this.speedX = (Math.random() - 0.5) * 2;
-        this.speedY = (Math.random() - 0.5) * 2;
+        this.speedX = (Math.random() - 0.5) * 1;
+        this.speedY = (Math.random() - 0.5) * 1;
       }
       draw() {
         ctx.beginPath();
@@ -69,6 +69,10 @@ export default function ParticlesBackground() {
   }, []); 
 
   return (
-    <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full pointer-events-none z-0" />
+    <canvas 
+    ref={canvasRef} 
+    className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+      
+    </canvas>
   );
 }
